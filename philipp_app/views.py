@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def access_table_list(request):
+    return render(request, 'philipp_app/access_table_list.html', {})
