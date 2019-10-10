@@ -1,9 +1,20 @@
+{% load static %}
 <html>
     <head>
-        <title>Ola's blog</title>
+        <title>Philipp Morris     </title>
+        <link rel="stylesheet" href="{% static 'css/users.css' %}">
     </head>
     <body>
         <p>Hi there!</p>
+        <table>
+        {% for user in users %}
+        	<tr><td>{{ user.name }}</td><td>{{ user.sap_id }}</td></tr>
+		{% endfor %}
+		</table>
         <p>It works!</p>
+        
+		<tr><th>{{users.}}</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->
+		 <!--ряд с ячейками тела таблицы-->
+		
     </body>
 </html>
