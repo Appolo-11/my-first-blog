@@ -15,4 +15,4 @@ class AccessTable(models.Model):
         self.save()
 
     def __str__(self):
-        return self.name + " " + self.sap_id
+        return self.name + " " + self.last_name + self.card_number + " " + self.sap_id
