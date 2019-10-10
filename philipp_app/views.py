@@ -23,9 +23,8 @@ def new_user(request):
 			post.laptop_access = True
 			post.terminal_access = False			
 			post.save()
-			print(post.sap_id)
             		#return redirect('post_detail', pk=post.pk)
 	else:
-		form = PostForm()
+		form = AccessTableForm()
 	return render(request, 'philipp_app/user_edit.html', {'form': form})
 

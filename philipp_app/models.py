@@ -17,11 +17,11 @@ class AccessTable(models.Model):
     sap_id = models.CharField(max_length=50, unique=True)
     laptop_access = models.BooleanField()
     terminal_access = models.BooleanField()
-    laptop_number = models.IntegerField(null=True)
-    laptop_status = models.CharField(null=True, choices=LAPTOP_STATUS_CHOICES, default=ST,)
+    laptop_number = models.IntegerField()
+    laptop_status = models.CharField(max_length=50, choices=LAPTOP_STATUS_CHOICES, default=ST,)
     if laptop_access:
     	laptop_number = models.IntegerField()
-    	laptop_status = models.CharField(max_length=50)
+    	laptop_status = models.CharField(max_length=50, choices=LAPTOP_STATUS_CHOICES, default=ST,)
     def publish(self):
         self.save()
 
